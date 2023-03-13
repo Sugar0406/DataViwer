@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
-from .CSVimporter_UI import Ui_MainWindow
+from CSVimporter_UI import Ui_importer
 
 
 
@@ -12,7 +12,7 @@ Use to import the data come from filetype '.xlsx' or '.csv'
 class CSVimporter_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(CSVimporter_MainWindow, self).__init__()
-        self.CSVimporter_UI = Ui_MainWindow()
+        self.CSVimporter_UI = Ui_importer()
         self.CSVimporter_UI.setupUi(self)
         self.CSVimpoter_controller()
 
