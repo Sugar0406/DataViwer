@@ -8,11 +8,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(600, 111)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_importer(object):
+    def setupUi(self, importer):
+        importer.setObjectName("importer")
+        importer.resize(600, 135)
+        self.centralwidget = QtWidgets.QWidget(importer)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -38,23 +38,23 @@ class Ui_MainWindow(object):
         self.errorLabel.setText("")
         self.errorLabel.setObjectName("errorLabel")
         self.verticalLayout.addWidget(self.errorLabel)
-        MainWindow.setCentralWidget(self.centralwidget)
+        importer.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(importer)
+        QtCore.QMetaObject.connectSlotsByName(importer)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, importer):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.choose_file_button.setText(_translate("MainWindow", "選擇檔案"))
+        importer.setWindowTitle(_translate("importer", "MainWindow"))
+        self.choose_file_button.setText(_translate("importer", "選擇檔案"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    importer = QtWidgets.QMainWindow()
+    ui = Ui_importer()
+    ui.setupUi(importer)
+    importer.show()
     sys.exit(app.exec_())
 

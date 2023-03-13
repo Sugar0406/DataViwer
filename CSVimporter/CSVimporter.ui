@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>importer</class>
+ <widget class="QMainWindow" name="importer">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>111</height>
+    <height>135</height>
    </rect>
   </property>
   <property name="windowTitle">
