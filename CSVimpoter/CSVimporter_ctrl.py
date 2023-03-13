@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
-from CSVimporter_UI import Ui_MainWindow
+from .CSVimporter_UI import Ui_MainWindow
 
 
 '''

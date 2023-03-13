@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 from Welcome_page_UI import Ui_MainWindow as welcome_page_UI
-from CSVimpoter.CSVimporter_ctrl import CSVimporter_MainWindow
 from CSVimpoter.CSVimporter_UI import Ui_MainWindow as CSVimporter_UIMainWindow
+from CSVimpoter.CSVimporter_ctrl import CSVimporter_MainWindow
 
 
 
