@@ -8,11 +8,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_importer(object):
-    def setupUi(self, importer):
-        importer.setObjectName("importer")
-        importer.resize(600, 135)
-        self.centralwidget = QtWidgets.QWidget(importer)
+class Ui_CSVimporter(object):
+    def setupUi(self, CSVimporter):
+        CSVimporter.setObjectName("CSVimporter")
+        CSVimporter.resize(600, 135)
+        self.centralwidget = QtWidgets.QWidget(CSVimporter)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -38,23 +38,23 @@ class Ui_importer(object):
         self.errorLabel.setText("")
         self.errorLabel.setObjectName("errorLabel")
         self.verticalLayout.addWidget(self.errorLabel)
-        importer.setCentralWidget(self.centralwidget)
+        CSVimporter.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(importer)
-        QtCore.QMetaObject.connectSlotsByName(importer)
+        self.retranslateUi(CSVimporter)
+        QtCore.QMetaObject.connectSlotsByName(CSVimporter)
 
-    def retranslateUi(self, importer):
+    def retranslateUi(self, CSVimporter):
         _translate = QtCore.QCoreApplication.translate
-        importer.setWindowTitle(_translate("importer", "MainWindow"))
-        self.choose_file_button.setText(_translate("importer", "選擇檔案"))
+        CSVimporter.setWindowTitle(_translate("CSVimporter", "choose file"))
+        self.choose_file_button.setText(_translate("CSVimporter", "打開檔案總管"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    importer = QtWidgets.QMainWindow()
-    ui = Ui_importer()
-    ui.setupUi(importer)
-    importer.show()
+    CSVimporter = QtWidgets.QMainWindow()
+    ui = Ui_CSVimporter()
+    ui.setupUi(CSVimporter)
+    CSVimporter.show()
     sys.exit(app.exec_())
 

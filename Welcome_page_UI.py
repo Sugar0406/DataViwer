@@ -8,11 +8,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(700, 541)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_Welcome_page(object):
+    def setupUi(self, Welcome_page):
+        Welcome_page.setObjectName("Welcome_page")
+        Welcome_page.resize(700, 541)
+        self.centralwidget = QtWidgets.QWidget(Welcome_page)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -32,24 +32,24 @@ class Ui_MainWindow(object):
         self.start_button.setFont(font)
         self.start_button.setObjectName("start_button")
         self.verticalLayout.addWidget(self.start_button)
-        MainWindow.setCentralWidget(self.centralwidget)
+        Welcome_page.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Welcome_page)
+        QtCore.QMetaObject.connectSlotsByName(Welcome_page)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Welcome_page):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.welcome_bar_label.setText(_translate("MainWindow", "WelCome"))
-        self.start_button.setText(_translate("MainWindow", "let\'s Start"))
+        Welcome_page.setWindowTitle(_translate("Welcome_page", "Welcome"))
+        self.welcome_bar_label.setText(_translate("Welcome_page", "WelCome"))
+        self.start_button.setText(_translate("Welcome_page", "let\'s Start"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    Welcome_page = QtWidgets.QMainWindow()
+    ui = Ui_Welcome_page()
+    ui.setupUi(Welcome_page)
+    Welcome_page.show()
     sys.exit(app.exec_())
 

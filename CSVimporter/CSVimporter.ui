@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>importer</class>
- <widget class="QMainWindow" name="importer">
+ <class>CSVimporter</class>
+ <widget class="QMainWindow" name="CSVimporter">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>choose file</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -39,7 +39,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="text">
-        <string>選擇檔案</string>
+        <string>打開檔案總管</string>
        </property>
       </widget>
      </widget>
