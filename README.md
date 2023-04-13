@@ -7,5 +7,5 @@ Come from: https://ithelp.ithome.com.tw/articles/10266822
 python import 
 https://carsonwah.github.io/15213187969322.html
 
-# nextWork
-ImportError: attempted relative import beyond top-level package
+# Execute
+python main.py

@@ -1,2 +1,10 @@
+# auto push bat
+gitPush.bat
+
+# test data
+LBMA-GOLD.csv
+Position_Saalaries.csv
+
+
 
 
