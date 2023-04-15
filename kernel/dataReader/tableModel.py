@@ -11,8 +11,11 @@ class tableAbstractModel(QAbstractTableModel):
         row = index.row()
         column = index.column()
         if role in { Qt.DisplayRole, Qt.EditRole}:
-            return self.data_value[row][column]
-        
+            try:
+                return self.data_value[row][column]
+            except IndexError:
+                return ''
+
     # setting number of row
     def rowCount(self, parent=QModelIndex()):
         return len(self.data_value)
@@ -32,15 +35,16 @@ class tableAbstractModel(QAbstractTableModel):
     def flags(self, index):
         return super().flags(index) | Qt.ItemIsEditable
     
+    # set edited data
     def setData(self, index, newValue, role=Qt.EditRole):
         if role in (Qt.DisplayRole, Qt.EditRole):
             
             # if not input any new Value, not change the oringinal Value
-            if not newValue:
+            if newValue == self.data_value[index.row()][index.column()]:
                 return False
             
             self.data_value[index.row()][index.column()] = newValue
-            return self.data_value
+            return True
 
 
 
