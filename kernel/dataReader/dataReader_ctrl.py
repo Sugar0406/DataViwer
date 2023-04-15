@@ -34,10 +34,7 @@ class dataReader_ctrl(QtWidgets.QMainWindow):
 
 
     def choose_chart(self):
-        self.dataReader_ui.data_tableView.setModel(self.model)
-        self.dataReader_ui.error_TextLabel.setText("fresh")
-        # dataReader_ctrl.close()
-        # charter_ctrl.show()
+        pass
 
 
     # button event for importer_button
