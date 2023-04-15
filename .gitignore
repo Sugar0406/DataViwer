@@ -5,8 +5,10 @@ gitPush.bat
 LBMA-GOLD.csv
 test.csv
 
+# pycache
+__pycache__/
 
-*/__pycache__
+
 
 
 
