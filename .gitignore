@@ -3,7 +3,16 @@ gitPush.bat
 
 # test data
 LBMA-GOLD.csv
-Position_Saalaries.csv
+test.csv
+
+
+*/__pycache__
+
+
+
+
+
+
 
 
 
