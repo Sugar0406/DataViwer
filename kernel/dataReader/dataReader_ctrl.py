@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from .dataReader_UI import Ui_data_reader
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
+from PyQt5.QtCore import pyqtSignal
 
 from .tableModel import tableAbstractModel
 # from ..charter.charter_ctrl import charter_ctrl
@@ -17,6 +18,8 @@ class dataReader_ctrl(QtWidgets.QMainWindow):
 
         self.model = None
         self.dataReader_conterller()
+
+        self.child_window = charter_ctrl()
         
 
     def dataReader_conterller(self):
@@ -34,6 +37,7 @@ class dataReader_ctrl(QtWidgets.QMainWindow):
 
 
     def choose_chart(self):
+        self.child_window.show()
         pass
 
 
@@ -45,11 +49,16 @@ class dataReader_ctrl(QtWidgets.QMainWindow):
 
         # test choose file is correct file type
         file_type = file_path.split('.')[-1]
-        if file_type == 'xlsx' or file_type == 'csv':
+
+        if file_path == '':     # not any input
+            pass 
+        elif file_type == 'xlsx' or file_type == 'csv':
+            self.setWindowTitle("讀取檔案中")
             self.dataReader_ui.filepath_lineEdit.setText(file_path)
             self.dataReader_ui.error_TextLabel.setText("")
             self.set_tableWidget(file_path, file_type)
-        else:
+            self.setWindowTitle("選取資料")
+        else:       # error file type
             self.dataReader_ui.filepath_lineEdit.setText("")
             self.dataReader_ui.error_TextLabel.setStyleSheet("color:red")
             self.dataReader_ui.error_TextLabel.setText('錯誤檔案格式,請使用.xlsx或.csv檔案')

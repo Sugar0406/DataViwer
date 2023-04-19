@@ -6,24 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>293</width>
+    <height>227</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>選擇圖表</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>100</y>
-      <width>611</width>
-      <height>391</height>
-     </rect>
-    </property>
-   </widget>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QListView" name="chart_listView"/>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
